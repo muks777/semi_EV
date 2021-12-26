@@ -170,7 +170,7 @@ MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
             <nav>
                 <ul class="mainmenu">
                     <li>
-                        <a class="menuB" href="#">전기차</a>
+                        <a class="menuB" href="<%=request.getContextPath()%>/model/view"">전기차</a>
                         <ul class="submenu">
                             <li><a href="<%=request.getContextPath()%>/model/view">전기차 조회</a></li> 
                             <!-- 전기차 등록은 관리자로 로그인할 경우에만 보이게끔 하기 -->
