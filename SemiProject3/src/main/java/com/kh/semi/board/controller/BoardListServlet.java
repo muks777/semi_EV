@@ -35,6 +35,7 @@ public class BoardListServlet extends HttpServlet{
 			}
 			
 		} catch (Exception e) {
+	
 		}
 		
 		String category_ = req.getParameter("category");

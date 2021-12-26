@@ -7,6 +7,7 @@
 <html lang="ko">
 
 <head>
+<script src="<%=request.getContextPath()%>/jquery-3.6.0.min.js"></script>
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +25,6 @@
     <!-- JS Front -->
     <script src="<%=request.getContextPath()%>/view/board/assets/theme.min.js"></script>
 
- 	<script src="<%= request.getContextPath() %>/resources/js/jquery-3.6.0.min.js"></script>
  	
     <style>
         body {
