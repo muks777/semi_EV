@@ -28,19 +28,21 @@ public class newsServlet extends HttpServlet {
 			if (req.getParameter("page") != null) {
 				page = Integer.parseInt(req.getParameter("page"));
 			}
-			int listCount = service.newsCount();
-			pageInfo = new PageInfo(page, 10, listCount, 10);
+			
 			String newsSearchText = req.getParameter("search_text");
 			if (newsSearchText != null && newsSearchText.length() > 0) {
-				
+				int listCount = service.newsCount(newsSearchText);
+				pageInfo = new PageInfo(page, 10, listCount, 10);
 				list = service.searchNews(pageInfo, newsSearchText);
 				req.setAttribute("newsSearchText", newsSearchText);
 				
 			} else {
-				
+				int listCount = service.newsCount("");
+				pageInfo = new PageInfo(page, 10, listCount, 10);
 				list = service.getAllNewsList(pageInfo);
 				req.setAttribute("newsSearchText", "");
 			}
+			
 			req.setAttribute("pageInfo", pageInfo);
 			req.setAttribute("list", list);
 			

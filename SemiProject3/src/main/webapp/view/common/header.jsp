@@ -165,7 +165,7 @@ MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
 </head>
 <body>
     <header class="header">
-        <div class="header_section_01"><img src="<%=request.getContextPath()%>/view/resources/img/logo_last.png" alt="로고사진"></div>
+        <div class="header_section_01"><a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/view/resources/img/logo_last.png" alt="로고사진"></a></div>
         <div class="header_section_02">
             <nav>
                 <ul class="mainmenu">

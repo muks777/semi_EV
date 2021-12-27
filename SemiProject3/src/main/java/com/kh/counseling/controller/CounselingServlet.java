@@ -23,7 +23,7 @@ public class CounselingServlet extends HttpServlet {
 			HttpSession session = req.getSession();
 			MemberVO member = (MemberVO) session.getAttribute("loginMember");
 			if (member == null) {
-				sendMsgPage(req, resp, "로그인이 필요합니다.", "");
+				sendMsgPage(req, resp, "로그인이 필요합니다.", "/model/view");
 				return;
 			}
 

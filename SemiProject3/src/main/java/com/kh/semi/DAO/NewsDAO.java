@@ -39,11 +39,11 @@ public class NewsDAO {
 
 				pstmt.setString(1, "%"+keyword+"%");
 				pstmt.setString(2, "%"+keyword+"%");
-				pstmt.setInt(3, pageInfo.getStartPage());
-				pstmt.setInt(4, pageInfo.getEndPage());
+				pstmt.setInt(3, pageInfo.getStartList());
+				pstmt.setInt(4, pageInfo.getEndList());
 				
 				rs = pstmt.executeQuery();
-			
+				
 			while (rs.next()) {
 				news news_api = new news();
 				news_api.setTitle(rs.getString("title"));
@@ -66,18 +66,19 @@ public class NewsDAO {
 		return newsList;
 
 	}
-	public int newsCount(Connection conn) {
+	public int newsCount(Connection conn, String keyWord) {
 		
 		int result = 0;
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		String sql = "SELECT count(*) FROM  NEWS_API";
+		String sql = "SELECT count(*) FROM  NEWS_API WHERE title like ? or description like ?";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-
+			pstmt.setString(1, "%"+keyWord+"%");
+			pstmt.setString(2, "%"+keyWord+"%");
 			rs = pstmt.executeQuery();
 			
 			rs.next();

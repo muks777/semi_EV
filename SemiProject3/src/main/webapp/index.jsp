@@ -19,13 +19,7 @@
 
     <style>
         /* 12/23(월) 헤더 수정한 부분 시작.*/
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: -20px 0;
-            padding: 0px;
-        }
-
+       
         .mySlides img {
             
             width: 100%;
@@ -172,16 +166,7 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header_section_01">
-        </div>
-        <div class="header_section_02">
-            <nav>
-            </nav>
-        </div>
-        <div class="header_section_03">
-        </div>
-    </header>
+   
     <section id="main-content1">
         <div class="slideshow-container">
         
@@ -229,16 +214,7 @@
    
 
     <script>
-        var header = document.querySelector('header'),
-            nav = document.querySelector('nav');
-
-        nav.addEventListener('mouseover', function() {
-            header.style.height = '350px';
-        });
-
-        nav.addEventListener('mouseout', function() {
-            header.style.height = '100px';
-        });
+    
 
 
         var slideIndex = 0;

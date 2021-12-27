@@ -510,15 +510,15 @@
 
 
 <body>
-
+	
    <%
       List<EvModelVO> list = (List<EvModelVO>)request.getAttribute("list");
       PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
       DecimalFormat format = new DecimalFormat("###,###");
    %>
-   
+   <div>
     <!-- 메인 페이지 시작-->
-    <div class="wrap background">
+    <div class="wrap background" >
         <div class="main_page">
             <form>            
                 <div class="main_left_box">
@@ -711,7 +711,7 @@
                             </div>
                             <!-- End Heading -->
                             <div class="d-grid mb-4">
-                                <button type="button" class="btn btn-primary btntransition form-btn" style="height: 50px; width: 100%;" onclick="location.href='CounselingForm.html';">구매
+                                <button type="button" class="btn btn-primary btntransition form-btn" style="height: 50px; width: 100%;" onclick="location.href='<%=request.getContextPath()%>/counseling/request';">구매
                                     상담 신청</button>
                             </div>
 
@@ -727,7 +727,7 @@
 
     </div>
 <%}%>
-
+</div>
     <script>
         /* 상세보기 처리기능 */
 
