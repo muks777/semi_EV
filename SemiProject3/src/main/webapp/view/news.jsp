@@ -174,7 +174,7 @@ body {
 				<%}%>
 			</table>
 			<div id="pageBar">
-				<button class="btn-arrow" onclick="pageMove(1)">
+				<button class="btn-arrow" onclick="pageMove(1)" style="cursor: pointer;">
 					<svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
 						fill="currentColor" class="bi bi-chevron-double-left"
 						viewBox="0 0 16 16">
@@ -185,7 +185,7 @@ body {
                   </svg>
 				</button>
 
-				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getPrvePage()%>)">
+				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getPrvePage()%>)" style="cursor: pointer;">
 					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
 						fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -194,13 +194,13 @@ body {
 				</button>
 				<% for (int i = pageInfo.getStartPage(); i <= pageInfo.getEndPage(); i++) { %>
 			<% if(i == pageInfo.getCurrentPage()) { %>
-				<button class="btn-arrow" disabled><%=i%></button>
+				<button class="btn-arrow" disabled style="color: #3bb44a"><%=i%></button>
 			<% } else { %>
-				<button class="btn-arrow" onclick="pageMove(<%=i%>)"><%=i%></button>
+				<button class="btn-arrow" onclick="pageMove(<%=i%>)" style="cursor: pointer;"><%=i%></button>
 			<% } %>
 			<% } %>
 
-				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getNextPage()%>)">
+				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getNextPage()%>)" style="cursor: pointer;">
 					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
 						fill="currentColor" class="bi bi-chevron-right"
 						viewBox="0 0 16 16">
@@ -209,7 +209,7 @@ body {
                   </svg>
 				</button>
 
-				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getMaxPage()%>)">
+				<button class="btn-arrow" onclick="pageMove(<%=pageInfo.getMaxPage()%>)" style="cursor: pointer;">
 					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
 						fill="currentColor" class="bi bi-chevron-double-right"
 						viewBox="0 0 16 16">
@@ -225,10 +225,10 @@ body {
                   		var link = '<%=request.getContextPath()%>/view/news?page='+page;
                   		
                   		if(<%=newsSearchText != null && newsSearchText.length() > 0 %>){
-                  			link += "&newsSearchText=<%=newsSearchText%>"
+                  			link += "&search_text=<%=newsSearchText%>"
                   		}
-                  		
-                  		location.href(link)
+                  		console.log(link);
+                  		location.href = link;
                   	}
                   </script>
 			</div>

@@ -28,9 +28,9 @@ public class NewsService {
 		close(conn);
 		return newsList;
 	}
-	public int newsCount(){
+	public int newsCount(String keyWord){
 		Connection conn = getConnection();
-		int result = dao.newsCount(conn);
+		int result = dao.newsCount(conn, keyWord);
 		close(conn);
 		return result;
 	}

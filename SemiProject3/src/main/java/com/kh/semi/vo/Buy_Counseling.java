@@ -1,6 +1,5 @@
 package com.kh.semi.vo;
 
-import java.util.Date;
 
 public class Buy_Counseling {
 
