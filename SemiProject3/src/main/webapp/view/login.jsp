@@ -151,7 +151,7 @@
                     <button type="submit" id="login-btn" >로그인</button>
                 </div>
                 <div class="enroll-btn-wrap">
-                    <button id="enroll-btn" onclick="location.href=<%=request.getContextPath() %>/enroll.jsp'">회원가입</button>
+                    <button id="enroll-btn" type="button" onclick="location.href='<%=request.getContextPath() %>/view/enroll.jsp'">회원가입</button>
                 </div>
             </form>
         </section>
