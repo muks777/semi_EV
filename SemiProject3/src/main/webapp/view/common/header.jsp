@@ -197,7 +197,7 @@ MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
                         <a class="menuB" href="#">커뮤니티</a>
                         <ul class="submenu">
                             <li><a href="#">공지사항</a></li>
-                            <li><a href="#">게시판</a></li>
+                            <li><a href="<%=request.getContextPath()%>/view/board/board_list.jsp">게시판</a></li>
                             <li><a href="#">이벤트</a></li>
                         </ul>
                     </li>

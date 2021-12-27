@@ -1,5 +1,5 @@
-<%@page import="java.net.URLEncoder"%>
 <%@page import="com.kh.common.util.PageInfo"%>
+<%@page import="java.net.URLEncoder"%>
 <%@page import="com.kh.semi.vo.BoardVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
