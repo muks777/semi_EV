@@ -133,6 +133,36 @@ public class EvModelDAO {
 		return result;
 	}
 	
+	//전기차 데이터 Searchcount
+	public int selectSearchEv(Connection conn,String keyword){
+		
+		int result = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String query = "SELECT COUNT(*) FROM ev WHERE modelname LIKE ? OR company LIKE ?";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, "%"+keyword+"%");
+			pstmt.setString(2, "%"+keyword+"%");
+			rs = pstmt.executeQuery();
+			
+			if(rs.next() == true) {
+				result = rs.getInt(1);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+			close(rs);
+		}
+		
+		return result;
+	}
+	
 	//페이지 당 불러올 전기차 데이터(조회순=default)
 	public List<EvModelVO> selectEv(Connection conn,PageInfo pageInfo){
 		

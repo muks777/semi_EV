@@ -35,7 +35,8 @@ public class EvModelSearchServlet extends HttpServlet{
 		System.out.println("======="+keyword);
 		System.out.println("======="+page);
 		
-		listCount = service.getModel(); //전기차 데이터 count		
+		listCount = service.getSearchModel(keyword); //전기차 데이터 count
+		System.out.println(listCount);
 		pageInfo = new PageInfo(page, 10, listCount, 12); //페이징
 		list = service.getModelSearch(pageInfo,keyword);
 		

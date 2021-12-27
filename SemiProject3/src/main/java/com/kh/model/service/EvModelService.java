@@ -42,6 +42,14 @@ public class EvModelService {
 		return count;
 	}
 	
+	public int getSearchModel(String keyword){
+		
+		Connection conn = getConnection();
+		int count = dao.selectSearchEv(conn,keyword);
+		close(conn);
+		return count;
+	}
+	
 	public List<EvModelVO> getModel(PageInfo pageInfo){
 		
 		Connection conn = getConnection();
