@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="../assets/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/hs-mega-menu.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/assets/bootstrap-icons.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/assets/hs-mega-menu.min.css">
 
     <!-- CSS Front Template -->
-    <link rel="stylesheet" href="../assets/theme.min.css">
-    <link rel="stylesheet" href="../assets/snippets.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/assets/theme.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/assets/snippets.min.css">
     
     <style>
         .btn-lg:hover,
