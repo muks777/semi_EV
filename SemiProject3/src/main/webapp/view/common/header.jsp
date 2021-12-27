@@ -170,14 +170,10 @@ MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
             <nav>
                 <ul class="mainmenu">
                     <li>
-                        <a class="menuB" href="<%=request.getContextPath()%>/model/view"">전기차</a>
+                        <a class="menuB" href="<%=request.getContextPath()%>/model/view">전기차</a>
                         <ul class="submenu">
-<<<<<<< HEAD
-                            <li><a href="<%=request.getContextPath()%>/model/view">전기차 조회</a></li>
-=======
-                            <li><a href="<%=request.getContextPath()%>/model/view">전기차 조회</a></li> 
->>>>>>> branch 'master' of https://github.com/muks777/semi_EV.git
-                            <!-- 전기차 등록은 관리자로 로그인할 경우에만 보이게끔 하기 -->
+							<li><a href="<%=request.getContextPath()%>/model/view">전기차 조회</a></li>
+							<!-- 전기차 등록은 관리자로 로그인할 경우에만 보이게끔 하기 -->
                             <%if(loginMember!=null && loginMember.getRole().equals("ADMIN")) {%>
                             <li><a href="<%=request.getContextPath()%>/view/model/write">전기차 등록</a></li>
                             <li><a href="<%=request.getContextPath()%>/counseling/list/inner">상담신청자 관리</a></li>
