@@ -515,7 +515,7 @@
 		PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
 		DecimalFormat format = new DecimalFormat("###,###");
 	%>
-	
+	<div>
     <!-- 메인 페이지 시작-->
     <div class="wrap background">
         <div class="main_page">
@@ -725,7 +725,7 @@
 
     </div>
 <%}%>
-
+</div>
     <script>
         /* 상세보기 처리기능 */
 
