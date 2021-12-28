@@ -79,7 +79,7 @@ public class EvModelWriteServlet extends HttpServlet{
 			}
 			req.setAttribute("msg", "게시글이 등록 되었습니다.");
 			req.setAttribute("location", "");
-			req.getRequestDispatcher("/view/common/msg.jsp").forward(req, resp);			
+			req.getRequestDispatcher("/view/common/msg.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace();
 			sendErrorPage(req, resp);

@@ -73,7 +73,7 @@
                                 <!-- Form -->
                                 <span class="d-block">
                                     <label class="form-label" for="blogContactsFormEmail"><b>가격</b></label>
-                                    <input type="text" class="form-control form-control-lg" name="blogContactsPrice" id="blogContactsFormPrice" placeholder="Price" required>
+                                    <input type="text" class="form-control form-control-lg" name="blogContactsPrice" id="blogContactsFormPrice" placeholder="Price(Only Number)" required>
                                 </span>
 
                                 <span class="d-block">
