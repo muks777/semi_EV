@@ -87,9 +87,11 @@
 
                             <!-- Form -->
                             <div class="row mb-3">
-                                <label for="carName" class="col-sm-4 col-form-label">상담할 전기차 모델명</label>
+                                <label for="modelNameInput" class="col-sm-4 col-form-label">상담할 전기차 모델명</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="carName" name="modelName" value="<%=modelName%>" disabled="disabled">
+                                    <input type="text" class="form-control" id="modelNameInput" name="modelNameInput" value="<%=modelName%>" disabled="disabled">
+                                    <input type="text" class="form-control" id="modelNameInput2" name="modelNameInput" value="<%=modelName%>" hidden="hidden">
+                                    
                                 </div>
                             </div>
                             <!-- End Form -->

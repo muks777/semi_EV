@@ -26,10 +26,12 @@ public class CounselingSave extends HttpServlet{
 			bc.setU_id(req.getParameter("id")); 
 			bc.setU_name(req.getParameter("name"));
 			bc.setPhone(req.getParameter("phone"));
-			bc.setTime(req.getParameter("time"));
+			bc.setTime(req.getParameter("reservation"));
 			bc.setCounseling_date(req.getParameter("date"));
 			bc.setInflow_path(req.getParameter("inflowPath"));
-			bc.setModelname(req.getParameter("modelName"));
+			bc.setModelname(req.getParameter("modelNameInput"));
+			System.out.println(bc.getModelname()+"겟");
+			System.out.println(req.getParameter("modelNameInput"));
 			bc.setAdditional_information(req.getParameter("additionalInfoCareersFormName"));
 			
 			int result = service.insertBC(bc);

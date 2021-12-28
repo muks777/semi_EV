@@ -190,6 +190,7 @@ public class Buy_counselingDAO {
 			pstmt.setString(2, bc.getU_name());
 			pstmt.setString(3, bc.getPhone());
 			pstmt.setString(4, bc.getModelname());
+			System.out.println(bc.getModelname());
 			pstmt.setString(5, bc.getCounseling_date());
 			pstmt.setString(6, bc.getTime());
 			pstmt.setString(7, bc.getInflow_path());
