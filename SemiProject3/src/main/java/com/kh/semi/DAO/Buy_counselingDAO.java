@@ -182,17 +182,18 @@ public class Buy_counselingDAO {
 	public int insertBC(Connection conn, Buy_Counseling bc) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "INSERT INTO BUY_COUNSELING VALUES(SEQ_BCNO.NEXTVAL, ?, ?, ?, sysdate, TO_DATE(?),?, ?, ?, DEFAULT)";
+		String sql = "INSERT INTO BUY_COUNSELING VALUES(SEQ_BCNO.NEXTVAL, ?, ?, ?, ?, sysdate, TO_DATE(?),?, ?, ?, DEFAULT)";
 		int result = -1;
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, bc.getU_name());
-			pstmt.setString(2, bc.getPhone());
-			pstmt.setString(3, bc.getModelname());
-			pstmt.setString(4, bc.getCounseling_date());
-			pstmt.setString(5, bc.getTime());
-			pstmt.setString(6, bc.getInflow_path());
-			pstmt.setString(7, bc.getAdditional_information());
+			pstmt.setString(1, bc.getU_id());
+			pstmt.setString(2, bc.getU_name());
+			pstmt.setString(3, bc.getPhone());
+			pstmt.setString(4, bc.getModelname());
+			pstmt.setString(5, bc.getCounseling_date());
+			pstmt.setString(6, bc.getTime());
+			pstmt.setString(7, bc.getInflow_path());
+			pstmt.setString(8, bc.getAdditional_information());
 
 			result = pstmt.executeUpdate();
 		} catch (Exception e) {

@@ -4,6 +4,7 @@ package com.kh.semi.vo;
 public class Buy_Counseling {
 
 	int bc_no;
+	String u_id;
 	String u_name;
 	String phone;
 	String modelname;
@@ -15,10 +16,12 @@ public class Buy_Counseling {
 	String check_counseling;
 	public Buy_Counseling() {
 	}
-	public Buy_Counseling(int bc_no, String u_name, String phone, String modelname, String application_date,
-			String counseling_date, String time, String inflow_path, String additional_information,
-			String check_counseling) {
+	
+	public Buy_Counseling(int bc_no, String u_id, String u_name, String phone, String modelname,
+			String application_date, String counseling_date, String time, String inflow_path,
+			String additional_information, String check_counseling) {
 		this.bc_no = bc_no;
+		this.u_id = u_id;
 		this.u_name = u_name;
 		this.phone = phone;
 		this.modelname = modelname;
@@ -29,6 +32,15 @@ public class Buy_Counseling {
 		this.additional_information = additional_information;
 		this.check_counseling = check_counseling;
 	}
+
+	public String getU_id() {
+		return u_id;
+	}
+
+	public void setU_id(String u_id) {
+		this.u_id = u_id;
+	}
+
 	public int getBc_no() {
 		return bc_no;
 	}

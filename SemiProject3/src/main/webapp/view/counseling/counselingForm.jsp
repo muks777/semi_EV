@@ -8,6 +8,7 @@
     	String modelName = (String)request.getAttribute("modelName");
     	String name = (String)request.getAttribute("name");
     	String phone = (String)request.getAttribute("phone");
+    	String id = (String)request.getAttribute("id");
     %>
 <!DOCTYPE html>
 <html>
@@ -70,6 +71,7 @@
                                 <label for="fullname" class="col-sm-4 col-form-label">이름</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="fullname" name="name" placeholder="홍길동" value="<%=name%>" aria-label="이름">
+                                    <input type="text" class="form-control" id="fullname" name="id"  value="<%=id%>" aria-label="이름" hidden="hidden">
                                 </div>
                             </div>
                             <!-- End Form -->

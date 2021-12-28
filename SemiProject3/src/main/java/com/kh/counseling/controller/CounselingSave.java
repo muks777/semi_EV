@@ -23,6 +23,7 @@ public class CounselingSave extends HttpServlet{
 		try {
 			Buy_Counseling bc = new Buy_Counseling();
 			
+			bc.setU_id(req.getParameter("id")); 
 			bc.setU_name(req.getParameter("name"));
 			bc.setPhone(req.getParameter("phone"));
 			bc.setTime(req.getParameter("time"));

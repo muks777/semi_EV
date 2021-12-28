@@ -32,6 +32,7 @@ public class CounselingServlet extends HttpServlet {
 			req.setAttribute("modelName", carModelName);
 			req.setAttribute("name", member.getName());
 			req.setAttribute("phone", member.getPhone());
+			req.setAttribute("id", member.getId());
 
 			req.getRequestDispatcher("/view/counseling/counselingForm.jsp").forward(req, resp);
 
