@@ -163,7 +163,7 @@
         <header>
             <!--로고-->
             <div class="logo">
-                <a href="index.html" title="네이버 홈페이지"><img src="<%=request.getContextPath()%>/view/resources/img/logo_last.png"  class="image" alt="로고사진"></a>
+                <a href="<%=request.getContextPath()%>" title="네이버 홈페이지"><img src="<%=request.getContextPath()%>/view/resources/img/logo_last.png"  class="image" alt="로고사진"></a>
             </div>
             <div id="signup-text">
                 <p>회 원 가 입</p>
