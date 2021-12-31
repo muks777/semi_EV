@@ -767,6 +767,7 @@
             	dataType:"text",
             	
             	success:function(data){
+            		//alert("조회수 증가");
             	},
             })
             
